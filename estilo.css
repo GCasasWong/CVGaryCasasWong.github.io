@@ -144,6 +144,7 @@ html {
   max-width: 700px;
   margin: auto;
   color: #666;
+  text-align: justify;
 }
 .sobremi .contenido-seccion .fila {
   display: flex;
@@ -271,6 +272,7 @@ html {
 .resumen .contenido-seccion .info .col table .descripcion {
   border-left: 1px solid #bab9b9;
   padding-left: 20px;
+  text-align: justify;
 }
 /* SECCION CONTACTO */
 .contacto {
@@ -333,6 +335,67 @@ html {
     margin-top: 10px;
     margin-bottom: 30px;
   }
+  .contacto .contenido-seccion .fila {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .habilidades .contenido-seccion .fila {
+    display: block;
+  }
+
+  .habilidades .contenido-seccion .fila .col {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .habilidades .contenido-seccion .fila .col .cont-barra {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .habilidades .contenido-seccion .barra {
+    width: 70%; /* Hacer que la barra ocupe todo el ancho disponible */
+
+  }
+
+  .habilidades .contenido-seccion .barra .e {
+    height: 30px; /* Reducir la altura de los elementos de la barra */
+    margin-right: 2px; /* Reducir el margen entre los elementos */
+  }
+
+  .sobremi .contenido-seccion .fila {
+    display: block;
+  }
+
+  .sobremi .contenido-seccion .fila .col {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .resumen .contenido-seccion .info {
+    display: block;
+  }
+
+  .resumen .contenido-seccion .info .col {
+    width: 90%;
+    margin: auto;
+  }
+
+  .resumen .contenido-seccion .info .col .titulo {
+    display: block;
+    text-align: center;
+  }
+
+  .resumen .contenido-seccion .info .col table {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
   .contacto .contenido-seccion .fila {
     display: block;
   }
