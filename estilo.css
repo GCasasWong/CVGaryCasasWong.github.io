@@ -146,6 +146,11 @@ html {
   color: #666;
   text-align: justify;
 }
+
+.sobremi .contenido-seccion .especial {
+  text-align: center;
+}
+
 .sobremi .contenido-seccion .fila {
   display: flex;
   margin-top: 30px;
