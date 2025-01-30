@@ -53,30 +53,50 @@ let entro = false;
 //función que aplica las animaciones de la habilidades
 function efectoHabilidades() {
   var habilidades = document.getElementById("habilidades");
-  var distancia_skills =
-    window.innerHeight - habilidades.getBoundingClientRect().top;
-  if (distancia_skills >= 300 && entro == false) {
-    entro = true;
-    const intervalHtml = setInterval(function () {
-      pintarBarra(html, 15, 0, intervalHtml);
-    }, 100);
-    const intervalJavascript = setInterval(function () {
-      pintarBarra(javascript, 14, 1, intervalJavascript);
-    }, 100);
-    const intervalfigma = setInterval(function () {
-      pintarBarra(figma, 13, 2, intervalfigma);
-    }, 100);
-    const intervalReact = setInterval(function () {
-      pintarBarra(React, 12, 3, intervalReact);
-    }, 100);
-    const intervalPostgress = setInterval(function () {
-      pintarBarra(Postgress, 15, 4, intervalPostgress);
-    }, 100);
-    const intervalBootstrap = setInterval(function () {
-      pintarBarra(Bootstrap, 15, 5, intervalBootstrap);
-    }, 100);
+  if (!habilidades) return;
+
+  var rect = habilidades.getBoundingClientRect();
+  var elementoVisible = (
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
+  );
+  
+  if (elementoVisible) {
+    if (entro == false) {
+      entro = true;
+      const intervalHtml = setInterval(function () {
+        pintarBarra(html, 15, 0, intervalHtml);
+      }, 100);
+      const intervalJavascript = setInterval(function () {
+        pintarBarra(javascript, 15, 1, intervalJavascript);
+      }, 100);
+      const intervalfigma = setInterval(function () {
+        pintarBarra(figma, 14, 2, intervalfigma);
+      }, 100);
+      const intervalReact = setInterval(function () {
+        pintarBarra(React, 14, 3, intervalReact);
+      }, 100);
+      const intervalPostgress = setInterval(function () {
+        pintarBarra(Postgress, 15, 4, intervalPostgress);
+      }, 100);
+      const intervalBootstrap = setInterval(function () {
+        pintarBarra(Bootstrap, 15, 5, intervalBootstrap);
+      }, 100);
+    }
+  } else {
+    entro = false;
+    contadores = [-1, -1, -1, -1, -1, -1];
+    const elementos = document.getElementsByClassName("e");
+    for (let elemento of elementos) {
+      elemento.style.backgroundColor = "";
+    }
   }
 }
+
+// Modificar el evento de scroll para mejor compatibilidad móvil
+window.addEventListener('scroll', efectoHabilidades);
+window.addEventListener('touchmove', efectoHabilidades);
+window.addEventListener('load', efectoHabilidades);
 
 //lleno una barra particular con la cantidad indicada
 function pintarBarra(id_barra, cantidad, indice, interval) {
