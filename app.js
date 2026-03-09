@@ -42,13 +42,41 @@ let Postgress = document.getElementById("Postgress");
 crearBarra(Postgress);
 let Bootstrap = document.getElementById("Bootstrap");
 crearBarra(Bootstrap);
+let metaAds = document.getElementById("metaAds");
+if (metaAds) crearBarra(metaAds);
+let playwright = document.getElementById("playwright");
+if (playwright) crearBarra(playwright);
 
 //Ahora voy a guardar la cantidad de barritas que se van a ir pintando por cada barar
-//para eso utilizo un arreglo, cada posiciòn pertenece a un elemento
+//para eso utilizo un arreglo, cada posición pertenece a un elemento
 //comienzan en -1 porque no tiene ninguna pintada al iniciarse
-let contadores = [-1, -1, -1, -1, -1, -1];
+let contadores = [-1, -1, -1, -1, -1, -1, -1, -1];
 //esta variable la voy a utilizar de bandera para saber si ya ejecuto la animación
 let entro = false;
+
+// Velocidad de animación (ms). Menor = más rápido.
+const ANIMACION_INTERVALO_MS = 60;
+
+// Porcentajes objetivo (deben coincidir con los % que se muestran en index.html)
+const PORCENTAJES = {
+  html: 95,
+  javascript: 90,
+  figma: 90,
+  react: 90,
+  seo: 90,
+  tailwind: 90,
+  metaAds: 90,
+  playwright: 90,
+};
+
+// Convierte un porcentaje (0-100) en cantidad de "barritas" a pintar.
+// Nota: crearBarra genera 17 segmentos (0..16), así que el máximo es 17.
+function porcentajeACantidad(porcentaje) {
+  const totalSegmentos = 17;
+  const p = Math.max(0, Math.min(100, porcentaje));
+  // Usamos ceil para que 90/95 se note bien (pinte un poco más vs round).
+  return Math.ceil((p / 100) * totalSegmentos);
+}
 
 //función que aplica las animaciones de la habilidades
 function efectoHabilidades() {
@@ -60,32 +88,60 @@ function efectoHabilidades() {
     rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect.bottom >= 0
   );
-  
+
   if (elementoVisible) {
     if (entro == false) {
       entro = true;
+
       const intervalHtml = setInterval(function () {
-        pintarBarra(html, 15, 0, intervalHtml);
-      }, 100);
+        pintarBarra(html, porcentajeACantidad(PORCENTAJES.html), 0, intervalHtml);
+      }, ANIMACION_INTERVALO_MS);
       const intervalJavascript = setInterval(function () {
-        pintarBarra(javascript, 15, 1, intervalJavascript);
-      }, 100);
-      const intervalfigma = setInterval(function () {
-        pintarBarra(figma, 14, 2, intervalfigma);
-      }, 100);
+        pintarBarra(
+          javascript,
+          porcentajeACantidad(PORCENTAJES.javascript),
+          1,
+          intervalJavascript
+        );
+      }, ANIMACION_INTERVALO_MS);
+      const intervalFigma = setInterval(function () {
+        pintarBarra(figma, porcentajeACantidad(PORCENTAJES.figma), 2, intervalFigma);
+      }, ANIMACION_INTERVALO_MS);
       const intervalReact = setInterval(function () {
-        pintarBarra(React, 14, 3, intervalReact);
-      }, 100);
-      const intervalPostgress = setInterval(function () {
-        pintarBarra(Postgress, 15, 4, intervalPostgress);
-      }, 100);
-      const intervalBootstrap = setInterval(function () {
-        pintarBarra(Bootstrap, 15, 5, intervalBootstrap);
-      }, 100);
+        pintarBarra(React, porcentajeACantidad(PORCENTAJES.react), 3, intervalReact);
+      }, ANIMACION_INTERVALO_MS);
+      const intervalSeo = setInterval(function () {
+        pintarBarra(Postgress, porcentajeACantidad(PORCENTAJES.seo), 4, intervalSeo);
+      }, ANIMACION_INTERVALO_MS);
+      const intervalTailwind = setInterval(function () {
+        pintarBarra(Bootstrap, porcentajeACantidad(PORCENTAJES.tailwind), 5, intervalTailwind);
+      }, ANIMACION_INTERVALO_MS);
+
+      if (metaAds) {
+        const intervalMetaAds = setInterval(function () {
+          pintarBarra(
+            metaAds,
+            porcentajeACantidad(PORCENTAJES.metaAds),
+            6,
+            intervalMetaAds
+          );
+        }, ANIMACION_INTERVALO_MS);
+      }
+
+      if (playwright) {
+        const intervalPlaywright = setInterval(function () {
+          pintarBarra(
+            playwright,
+            porcentajeACantidad(PORCENTAJES.playwright),
+            7,
+            intervalPlaywright
+          );
+        }, ANIMACION_INTERVALO_MS);
+      }
     }
   } else {
     entro = false;
-    contadores = [-1, -1, -1, -1, -1, -1];
+    contadores = [-1, -1, -1, -1, -1, -1, -1, -1];
     const elementos = document.getElementsByClassName("e");
     for (let elemento of elementos) {
       elemento.style.backgroundColor = "";
@@ -94,9 +150,9 @@ function efectoHabilidades() {
 }
 
 // Modificar el evento de scroll para mejor compatibilidad móvil
-window.addEventListener('scroll', efectoHabilidades);
-window.addEventListener('touchmove', efectoHabilidades);
-window.addEventListener('load', efectoHabilidades);
+window.addEventListener("scroll", efectoHabilidades);
+window.addEventListener("touchmove", efectoHabilidades);
+window.addEventListener("load", efectoHabilidades);
 
 //lleno una barra particular con la cantidad indicada
 function pintarBarra(id_barra, cantidad, indice, interval) {
@@ -104,7 +160,9 @@ function pintarBarra(id_barra, cantidad, indice, interval) {
   x = contadores[indice];
   if (x < cantidad) {
     let elementos = id_barra.getElementsByClassName("e");
-    elementos[x].style.backgroundColor = "#940253";
+    if (elementos[x]) {
+      elementos[x].style.backgroundColor = "#940253";
+    }
   } else {
     clearInterval(interval);
   }
