@@ -159,7 +159,7 @@ img {
 .hero {
   display: grid;
   gap: 1.2rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   text-align: center;
 }
 
@@ -254,7 +254,7 @@ img {
 
 .hero-photo {
   margin: 2.2rem auto 0;
-  max-width: 170px;
+  max-width: 250px;
   position: relative;
 }
 
@@ -636,7 +636,7 @@ button:focus-visible {
   }
 
   .hero {
-    padding-top: 7rem;
+    padding-top: 4rem;
   }
 }
 
