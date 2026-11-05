@@ -421,45 +421,62 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.skill-item {
+.skill-category {
   background: rgba(28, 40, 70, 0.7);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
-.skill-head {
+.skill-category h3 {
   align-items: center;
+  color: var(--primary);
   display: flex;
-  gap: 0.7rem;
-  justify-content: space-between;
-  margin-bottom: 0.65rem;
+  font-size: 1.05rem;
+  gap: 0.55rem;
 }
 
-.skill-head h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.skill-head span {
+.skill-category h3 i {
   color: var(--accent);
-  font-weight: 700;
 }
 
-.skill-track {
-  background: rgba(7, 12, 24, 0.75);
-  border: 1px solid rgba(124, 240, 208, 0.2);
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-top: 0.9rem;
+}
+
+.chip {
+  background: rgba(97, 181, 255, 0.12);
+  border: 1px solid rgba(97, 181, 255, 0.3);
   border-radius: 999px;
-  height: 11px;
-  overflow: hidden;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.32rem 0.8rem;
 }
 
-.skill-fill {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: inherit;
-  height: 100%;
-  transition: width 1.1s ease-in-out;
-  width: 0;
+.chip:hover {
+  background: rgba(124, 240, 208, 0.16);
+  border-color: rgba(124, 240, 208, 0.45);
+}
+
+.project-media--placeholder {
+  align-items: center;
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(600px 220px at 20% 20%, rgba(97, 181, 255, 0.3), transparent),
+    radial-gradient(500px 260px at 85% 80%, rgba(124, 240, 208, 0.22), transparent),
+    linear-gradient(140deg, #1a2b4e, #101b32);
+  display: flex;
+  justify-content: center;
+}
+
+.project-media--placeholder i {
+  color: rgba(124, 240, 208, 0.75);
+  font-size: 3.4rem;
 }
 
 .resume {
@@ -682,8 +699,7 @@ button:focus-visible {
   }
 
   *,
-  .reveal,
-  .skill-fill {
+  .reveal {
     animation: none !important;
     transition: none !important;
   }

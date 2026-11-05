@@ -1,0 +1,47 @@
+GARY JAIR CASAS WONG
+Desarrollador Full Stack & Growth Marketer
+Lima, Lima, Perú | Cel. +51 974714057 | garyjair01@hotmail.com
+Linkedin - Github - Portafolio
+PERFIL PROFESIONAL
+Profesional híbrido con base sólida en Contabilidad (visión de negocio), Desarrollo Full Stack (construcción de productos web) y Growth Marketing (Performance y adquisición de clientes). Especializado en el ciclo completo del negocio digital: desde el desarrollo web en React/Next.js y optimización SEO técnico (100 puntos en Google Lighthouse), hasta la creación de embudos de conversión, campañas de alto tráfico en Meta Ads y landing pages. Ejecuto todo el flujo de marketing: integración de Facebook Pixel, edición multimedia avanzada (video, audio y contraste para retención de atención) y redacción de copys persuasivos para maximizar ventas y retorno de inversión.
+PROYECTOS DESTACADOS
+Front-end Developer & Growth – bingotienda.com (Ene. 2025 - Actualidad)
+* ?? BingoTienda
+* Plataforma de bingo en tiempo real – Aloalto Sistema de Información SAC
+* Diseño y desarrollo de plataforma de bingo en tiempo real, intuitiva y responsive, migrando arquitectura a Hono + Bun para reducir costos y latencia.
+* Ejecución de todo el flujo publicitario y de creación de contenido: edición de fotos y videos atractivos con efectos visuales y sonoros orientados a la conversión.
+* Suscripción automatizada validando pagos (Yape/Plin/Transferencia) y autenticación con Google.
+Proyecto de Alquiler de Inmuebles mediante Funnels – Aloalto Inmuebles
+* ?? Aloalto.inmuebles
+* Desarrollo integral de sistema de captación de leads y propietarios mediante embudos de conversión end-to-end (landing page, derivación y filtros).
+* Creación y gestión de campañas de Facebook Ads, optimizando el algoritmo para un alto CTR y trayendo el público ideal.
+* Implementación de landing pages orientadas a la conversión, integración de Pixel, segmentación y redacción de copys con llamados a la acción (CTA) claros.
+MobileCer y Depabarato.com (Proyectos Académicos y Profesionales)
+* ?? depabarato
+* Implementación de sistemas de diseño (Figma / eBay EVO Design System), bases de datos y altos estándares de SEO técnico.
+EXPERIENCIA PROFESIONAL
+Full Stack Developer & Growth (Junio. 2023 - actualidad)
+Aloalto Sistema de Información SAC (Híbrido)
+* Desarrollo front-end (altoq.pe, depabarato.com, aloalto.pe, bingotienda.com, aloalto.inmuebles.pe), optimización de UI/UX, implementación de SEO e integración de estrategias de pauta publicitaria.
+Asesor Financiero Senior (Ene. 2016 - May. 2023)
+Mibanco - Banco de la Microempresa S.A. (Presencial)
+* Gestión de cartera de clientes, asesoría en inversiones y optimización de estrategias para mejorar el desempeño financiero.
+HABILIDADES Y TECNOLOGÍAS
+* Desarrollo Web: React.js, Next.js, TypeScript, JavaScript, Java, Tailwind CSS, HTML5, CSS3, Hono, Bun, Node.js, PostgreSQL.
+* Growth Marketing & Contenidos: Meta Ads (Facebook Ads), Facebook Pixel, Embudos de Venta (Funnels), Landing Pages, SEO, Edición de Video y Foto, Copywriting.
+* Base de datos: PostgreSQL, MySQL, MongoDB.
+* Herramientas: Figma, Git, Firebase, Vercel.
+EDUCACIÓN Y FORMACIÓN
+* Bachiller en Contabilidad - Universidad Señor de Sipán (2016)
+* Full Stack Web Developer - Henry Bootcamp (Ene. 2024 – Mar. 2025)
+* Especialización Web Design for Everybody - Univ. de Michigan (Agos. 2024 – Dic. 2025)
+* Cursos Platzi - Diseño Centrado en Usuario, Diseño para Developers, Frontend Developer, Fundamentos de Diseño de Interfaces UX/UI, Patrones y Componentes en Sistemas de Diseño, Práctico de Sistemas de Diseño con Figma, Tailwind CSS, Animaciones con CSS, Estrategia de SEO, TypeScript: Tipos Avanzados y Funciones , Profesional de Git y GitHub.
+
+
+
+
+
+ANEXOS Y DOCUMENTACIÓN
+
+  
+     
